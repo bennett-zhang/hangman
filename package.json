@@ -1,0 +1,37 @@
+{
+	"name": "hangman",
+	"version": "0.0.1",
+	"description": "Artificial intelligence for the popular word game hangman.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bennett-zhang/hangman"
+	},
+	"keywords": [
+		"artificial",
+		"intelligence",
+		"hangman",
+		"word",
+		"game"
+	],
+	"author": "Bennett Zhang",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.15.4",
+		"pug": "^2.0.0-rc.4",
+		"socket.io": "^2.0.3"
+	},
+	"devDependencies": {
+		"grunt-autoprefixer": "^3.0.4",
+		"grunt-concurrent": "^2.3.1",
+		"grunt-contrib-cssmin": "^2.2.1",
+		"grunt-contrib-nodemon": "^0.5.4",
+		"grunt-contrib-watch": "^1.0.0",
+		"grunt-sass": "^2.0.0",
+		"load-grunt-tasks": "^3.5.2"
+	}
+}

@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+$blue: #00a4ff;
+
+.container,
+body,
+html {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 0 15px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	margin: 5px 0;
+}
+
+input {
+	margin: 0 6px;
+	text-align: center;
+	font: inherit;
+
+	&[type="number"] {
+		border: none;
+		border-bottom: 2px dotted gray;
+	}
+
+	&[type="button"],
+	&[type="submit"] {
+		background-color: $blue;
+		padding: 2px 7px;
+		border: none;
+		border-radius: 5px;
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			background: darken($blue, 5%);
+		}
+
+		&:active {
+			background: darken($blue, 10%);
+		}
+	}
+}
+
+#length {
+	width: 2.2rem;
+}
+
+#loading {
+	display: none;
+	font-size: 2rem;
+}
+
+#game {
+	display: none;
+}
+
+.letter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 4.5rem;
+	border-bottom: 3px solid black;
+	margin: 0 10px;
+	font-size: 3rem;
+	font-weight: lighter;
+	cursor: pointer;
+
+	&.fixed {
+		cursor: default;
+	}
+}
+
+#eliminated {
+	font-size: 2rem;
+	text-decoration: line-through;
+}
+
+#instructions {
+	text-align: center;
+}
+
+#guess {
+	color: $blue;
+}
+
+#done {
+	font-size: 1.5rem;
+}
