@@ -1,6 +1,6 @@
 {
 	"name": "hangman",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Artificial intelligence for the popular word game hangman.",
 	"main": "index.js",
 	"scripts": {
