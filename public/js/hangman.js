@@ -67,8 +67,8 @@ $done.click(evt => {
 	socket.emit("done", currentGuess, knownLetters)
 })
 
-socket.on("eliminate", eliminatedLetters => {
-	$eliminated.text(eliminatedLetters)
+socket.on("eliminate", letter => {
+	$eliminated.append(letter)
 })
 
 socket.on("finish", clear)

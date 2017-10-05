@@ -5,28 +5,28 @@ html
 
 	body
 		.container
-			
+
 			.row
 				form#start
 					label(for="length") Think of a word. Your word has
 					input#length(type="number" min="2" max="15" value="5")
 					label(for="length") letters.
 					input(type="submit" value="Start Game")
-			
+
 			.row
 				span#loading Loading&hellip;
-			
+
 			#game
 				.row#word
-				
+
 				.row
 					span#eliminated
-				
+
 				.row
 					p#instructions If your word has the letter #[b#guess]
 						| , click every blank above that corresponds to that letter.
-				
+
 				.row
 					input#done(type="button" value="Done")
-		
+
 		include ../partials/scripts.pug

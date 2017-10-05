@@ -9,7 +9,6 @@ require("./dictionary")(onload)
 let io
 let guesses
 let knownLetters
-let eliminatedLetters
 let dictionary
 let possibleWords
 
@@ -25,11 +24,9 @@ function onload(dict) {
 
 		socket.on("done", (currentGuess, letters) => {
 			if (knownLetters === letters)
-				eliminatedLetters += currentGuess
-			else
-				knownLetters = letters
+				socket.emit("eliminate", currentGuess)
 
-			socket.emit("eliminate", eliminatedLetters)
+			knownLetters = letters
 
 			filterPossibleWords()
 			if (!possibleWords.length) {
@@ -48,7 +45,6 @@ function onload(dict) {
 
 function start(socket, length) {
 	guesses = ""
-	eliminatedLetters = ""
 	possibleWords = dictionary
 
 	if (Number.isInteger(length) && length >= 2 && length <= 15) {
@@ -95,7 +91,7 @@ function guess(socket, str) {
 }
 
 function filterPossibleWords() {
-	const combined = knownLetters.replace(/\*/g, `[^${eliminatedLetters}]`)
+	const combined = knownLetters.replace(/\*/g, `[^${guesses}]`)
 	const regExp = new RegExp(`^${combined}$`)
 	possibleWords = possibleWords.filter(word => regExp.test(word))
 }
