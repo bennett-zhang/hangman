@@ -25,6 +25,7 @@ html {
 	justify-content: center;
 	width: 100%;
 	margin: 5px 0;
+	text-align: center;
 }
 
 input {
@@ -73,11 +74,11 @@ input {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 4rem;
-	height: 4.5rem;
-	border-bottom: 3px solid black;
-	margin: 0 10px;
-	font-size: 3rem;
+	width: 8vw;
+	height: 9vw;
+	border-bottom: 0.41vw solid black;
+	margin: 0 2vw;
+	font-size: 8vw;
 	font-weight: lighter;
 	cursor: pointer;
 
@@ -89,10 +90,6 @@ input {
 #eliminated {
 	font-size: 2rem;
 	text-decoration: line-through;
-}
-
-#instructions {
-	text-align: center;
 }
 
 #guess {
